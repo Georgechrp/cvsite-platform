@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Site Templates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Διάλεξε το δικό σου προσωπικό CV site</h1>
+        <p>Επαγγελματικό, δυναμικό, εύκολα επεξεργάσιμο</p>
+    </header>
+
+    <section id="templates">
+        <h2>Διάλεξε ένα από τα Templates μας</h2>
+        <div class="template-grid">
+            
+            <div class="template-card">
+                <img src="assets/img/template1.png" alt="Template 1" class="template-preview">
+                <div class="button-group">
+                    <button onclick="previewTemplate('templates/template1/index.html')">🔍 Preview</button>
+                    <button onclick="selectTemplate('template1')">Επέλεξε</button>
+                </div>
+            </div>
+
+            
+           <div class="template-card">
+                <img src="assets/img/template2.png" alt="Template 2" class="template-preview">
+                <div class="button-group">
+                    <button onclick="previewTemplate('templates/template2/index.html')">🔍 Preview</button>
+                    <button onclick="selectTemplate('template2')">Επέλεξε</button>
+                </div>
+            </div>
+
+
+            <div class="template-card">
+                <img src="assets/img/template3.png" alt="Template 3" class="template-preview">
+                <div class="button-group">
+                    <button onclick="previewTemplate('templates/template3/index.html')">🔍 Preview</button>
+                    <button onclick="selectTemplate('template3')">Επέλεξε</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="form">
+        <h2>Συμπλήρωσε τα στοιχεία σου</h2>
+        <form action="https://formspree.io/f/mldndnal" method="POST">
+            <input type="text" name="name" placeholder="Ονοματεπώνυμο" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="bio" placeholder="Σύντομο bio"></textarea>
+            <button type="submit">Αποστολή</button>
+        </form>
+    </section>
+
+    <script src="order.js"></script>
+</body>
+</html>
