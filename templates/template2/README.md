@@ -1,8 +1,21 @@
-# Konstantina Alevizou – Professional Blog & CV
+# 🌐 Georgechrp.github.io
 
-Welcome to the personal website of Konstantina Alevizou.  
-This site serves as a **professional blog and digital CV**, showcasing experience, qualifications, and thoughts on language education, communication, and lifelong learning.
+Αυτό το repository περιέχει τον πηγαίο κώδικα της προσωπικής μου ιστοσελίδας, διαθέσιμη στο:
 
-Built with ❤️ using Jekyll.
+🔗 [Δείτε την προσωπική μου ιστοσελίδα](https://georgioschristopoulos.info)
 
-> For inquiries, feel free to connect via the contact links on the site.
+## 📄 Βιογραφικό
+
+Μπορείτε να δείτε ή να κατεβάσετε το βιογραφικό μου από εδώ:
+
+👉 [Δείτε το Βιογραφικό](https://assets/CV-GeorgiosChristopoulos.pdf)
+
+## 📦 Τεχνολογίες που χρησιμοποιώ
+
+- Android, Kotlin, Jetpack Compose
+- C#, Python
+- HTML, CSS, JavaScript
+
+
+
+

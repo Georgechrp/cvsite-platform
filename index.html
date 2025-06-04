@@ -20,7 +20,7 @@
                 <img src="assets/img/template1.png" alt="Template 1" class="template-preview">
                 <div class="button-group">
                     <button onclick="previewTemplate('templates/template1/index.html')">🔍 Preview</button>
-                    <button onclick="selectTemplate('template1')">Επέλεξε</button>
+                    <button onclick="addToCart('template1')">🛒 Προσθήκη στο καλάθι</button>
                 </div>
             </div>
 
@@ -29,7 +29,7 @@
                 <img src="assets/img/template2.png" alt="Template 2" class="template-preview">
                 <div class="button-group">
                     <button onclick="previewTemplate('templates/template2/index.html')">🔍 Preview</button>
-                    <button onclick="selectTemplate('template2')">Επέλεξε</button>
+                    <button onclick="addToCart('template2')">🛒 Προσθήκη στο καλάθι</button>
                 </div>
             </div>
 
@@ -38,22 +38,27 @@
                 <img src="assets/img/template3.png" alt="Template 3" class="template-preview">
                 <div class="button-group">
                     <button onclick="previewTemplate('templates/template3/index.html')">🔍 Preview</button>
-                    <button onclick="selectTemplate('template3')">Επέλεξε</button>
+                    <button onclick="addToCart('template3')">🛒 Προσθήκη στο καλάθι</button>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section id="form">
-        <h2>Συμπλήρωσε τα στοιχεία σου</h2>
+   <section id="form">
+    <h2>Συμπλήρωσε τα στοιχεία σου</h2>
+
+    <p id="selectedDisplay" style="font-weight: bold; color: #0d47a1;">Δεν έχει επιλεχθεί ακόμα template.</p>
+
         <form action="https://formspree.io/f/mldndnal" method="POST">
+            <input type="hidden" name="selected_template" id="selected_template">
             <input type="text" name="name" placeholder="Ονοματεπώνυμο" required>
             <input type="email" name="email" placeholder="Email" required>
             <textarea name="bio" placeholder="Σύντομο bio"></textarea>
             <button type="submit">Αποστολή</button>
         </form>
     </section>
+
 
     <script src="order.js"></script>
 </body>
