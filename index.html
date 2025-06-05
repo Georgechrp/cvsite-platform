@@ -13,84 +13,63 @@
   <p>Επαγγελματικό, δυναμικό, εύκολα επεξεργάσιμο</p>
 </header>
 
-<section id="templates">
-  <h2>Διάλεξε ένα από τα Templates μας</h2>
-  <div class="template-grid">
+    <section id="templates">
+    <h2>Διάλεξε ένα από τα Templates μας</h2>
+    <div class="template-grid">
 
-    <div class="template-card" data-template-url="templates/template1/index.html">
-      <img src="assets/img/template1.png" alt="Template 1" class="template-preview">
-      <div class="button-group">
-        <button onclick="previewTemplate('templates/template1/index.html')">🔍 Preview</button>
-        <button onclick="addToCart('template1')">🛒 Επιλογή</button>
-      </div>
+        <div class="template-card" data-template-url="templates/template1/index.html">
+        <img src="assets/img/template1.png" alt="Template 1" class="template-preview">
+        <div class="button-group">
+            <button onclick="previewTemplate('templates/template1/index.html')">🔍 Preview</button>
+            <button onclick="addToCart('template1')">🛒 Επιλογή</button>
+        </div>
+        </div>
+
+        <div class="template-card" data-template-url="templates/template2/index.html">
+        <img src="assets/img/template2.png" alt="Template 2" class="template-preview">
+        <div class="button-group">
+            <button onclick="previewTemplate('templates/template2/index.html')">🔍 Preview</button>
+            <button onclick="addToCart('template2')">🛒 Επιλογή</button>
+        </div>
+        </div>
+
+        <div class="template-card" data-template-url="templates/template3/index.html">
+        <img src="assets/img/template3.png" alt="Template 3" class="template-preview">
+        <div class="button-group">
+            <button onclick="previewTemplate('templates/template3/index.html')">🔍 Preview</button>
+            <button onclick="addToCart('template3')">🛒 Επιλογή</button>
+        </div>
+        </div>
+
     </div>
 
-    <div class="template-card" data-template-url="templates/template2/index.html">
-      <img src="assets/img/template2.png" alt="Template 2" class="template-preview">
-      <div class="button-group">
-        <button onclick="previewTemplate('templates/template2/index.html')">🔍 Preview</button>
-        <button onclick="addToCart('template2')">🛒 Επιλογή</button>
-      </div>
-    </div>
-
-    <div class="template-card" data-template-url="templates/template3/index.html">
-      <img src="assets/img/template3.png" alt="Template 3" class="template-preview">
-      <div class="button-group">
-        <button onclick="previewTemplate('templates/template3/index.html')">🔍 Preview</button>
-        <button onclick="addToCart('template3')">🛒 Επιλογή</button>
-      </div>
-    </div>
-
-  </div>
-
-  <p id="selectedDisplay">Δεν έχει επιλεχθεί ακόμα template.</p>
-</section>
+    <p id="selectedDisplay">Δεν έχει επιλεχθεί ακόμα template.</p>
+    </section>
 
 
-<section id="form">
-  <h2>Συμπλήρωσε τα στοιχεία σου</h2>
-  <form id="orderForm" action="https://formspree.io/f/mldndnal" method="POST">
-    <input type="hidden" name="selected_template" id="selected_template">
-    <input type="text" name="name" placeholder="Ονοματεπώνυμο" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="bio" placeholder="Σύντομο bio"></textarea>
-    <button type="submit">Αποστολή</button>
-  </form>
-</section>
-
-<script>
-  function addToCart(templateId) {
-    sessionStorage.setItem('selectedTemplate', templateId);
-
-    const displayField = document.getElementById("selectedDisplay");
-    displayField.textContent = "Επέλεξες το: " + templateId;
-
-    const hiddenInput = document.getElementById("selected_template");
-    hiddenInput.value = templateId;
-  }
-
-  function previewTemplate(templateUrl) {
-    window.open(templateUrl, '_blank');
-  }
-
-  document.querySelector("form").addEventListener("submit", function(e) {
-    const selectedTemplate = sessionStorage.getItem('selectedTemplate');
-    if (selectedTemplate) {
-      document.getElementById("selected_template").value = selectedTemplate;
-    }
-  });
-</script>
+    <section id="form">
+    <h2>Συμπλήρωσε τα στοιχεία σου</h2>
+    <form id="orderForm" action="https://formspree.io/f/mldndnal" method="POST">
+        <input type="hidden" name="selected_template" id="selected_template">
+        <input type="text" name="name" placeholder="Ονοματεπώνυμο" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <textarea name="bio" placeholder="Σύντομο bio"></textarea>
+        <button type="submit">Αποστολή</button>
+    </form>
+    </section>
 
 
 
-<footer style="background-color: #0d47a1; color: white; text-align: center; padding: 1rem 0; margin-top: 2rem;">
-  <p style="margin: 0;">&copy; 2025 CV Templates by George. All rights reserved.</p>
-  <p>
-  <a href="terms.html" style="color: #bbdefb;">Όροι Χρήσης</a> | 
-  <a href="mailto:christopoulosg2@gmail.com" style="color: #bbdefb;">Επικοινωνία</a>
-</p>
+    <footer style="background-color: #0d47a1; color: white; text-align: center; padding: 1rem 0; margin-top: 2rem;">
+    <p style="margin: 0;">&copy; 2025 CV Templates by George. All rights reserved.</p>
+    <p>
+    <a href="terms.html" style="color: #bbdefb;">Όροι Χρήσης</a> | 
+    <a href="mailto:christopoulosg2@gmail.com" style="color: #bbdefb;">Επικοινωνία</a>
+    </p>
 
-</footer>
+    </footer>
+
+<script src="order.js"></script>
 
 </body>
 </html>
