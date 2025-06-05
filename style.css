@@ -174,3 +174,74 @@ html {
 .topbar .nav-links a:hover {
   color: #0d47a1;
 }
+
+
+
+#chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0d47a1;
+  color: white;
+  border-radius: 30px;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+#chatbot-button:hover {
+  background-color: #1565c0;
+}
+
+#chatbot-box {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  z-index: 1001;
+}
+
+#chatbot-box.hidden {
+  display: none;
+}
+
+#chatbot-header {
+  background-color: #0d47a1;
+  color: white;
+  padding: 0.8rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#chatbot-content {
+  padding: 1rem;
+}
+
+#chatbot-content p {
+  margin-bottom: 1rem;
+}
+
+#chatbot-content button {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#chatbot-content button:hover {
+  background-color: #bbdefb;
+}
