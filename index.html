@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CV Site Templates</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -27,8 +28,19 @@
   <p>Επαγγελματικό, δυναμικό, εύκολα επεξεργάσιμο</p>
 </header>
 
-    <section id="templates">
-    <h2>Διάλεξε ένα από τα Templates μας</h2>
+    <section id="how-it-works" data-aos="fade-up">
+      <h2>Πώς λειτουργεί</h2>
+      <p style="max-width: 800px; margin: auto; font-size: 1.1rem;">
+        Ενδιαφέρεσαι για ένα επαγγελματικό CV site; 
+        Συμπλήρωσε την παρακάτω φόρμα και σύντομα θα επικοινωνήσουμε μαζί σου με όλες τις λεπτομέρειες (π.χ. τιμές, τρόπος πληρωμής, χρόνος υλοποίησης).
+      </p>
+      <p style="max-width: 800px; margin: 1rem auto 0; font-size: 1rem; color: #555;">
+        💡 Μπορείς να δεις τα διαθέσιμα templates παρακάτω και να επιλέξεις αυτό που σου ταιριάζει περισσότερο.
+      </p>
+    </section>
+
+    <section id="templates" data-aos="fade-up">
+    <h2>Επέλεξε ένα από τα Templates που εμπιστεύτηκαν επαγγελματίες</h2>
     <div class="template-grid">
 
         <div class="template-card" data-template-url="templates/template1/index.html">
@@ -61,7 +73,7 @@
     </section>
 
 
-    <section id="form">
+    <section id="form" data-aos="fade-up">
     <h2>Συμπλήρωσε τα στοιχεία σου</h2>
     <form id="orderForm" action="https://formspree.io/f/mldndnal" method="POST">
         <input type="hidden" name="selected_template" id="selected_template">
@@ -84,6 +96,13 @@
     </footer>
 
 <script src="order.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
 
 </body>
 </html>
