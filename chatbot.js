@@ -27,10 +27,10 @@ function selectPurpose(purpose) {
 }
 
 function finalChoice(purpose, style) {
-  let suggestion = "template1";
+  let suggestion = "πρώτο σχέδιο";
 
-  if (purpose === "job" && style === "modern") suggestion = "template2";
-  else if (purpose === "portfolio" || style === "colorful") suggestion = "template3";
+  if (purpose === "job" && style === "modern") suggestion = "δεύτερο σχέδιο";
+  else if (purpose === "portfolio" || style === "colorful") suggestion = "τρίτο σχέδιο";
 
   // Show result
   chatbotContent.innerHTML = `
