@@ -73,16 +73,24 @@
     </section>
 
 
-    <section id="form" data-aos="fade-up">
-    <h2>Συμπλήρωσε τα στοιχεία σου</h2>
-    <form id="orderForm" action="https://formspree.io/f/mldndnal" method="POST">
-        <input type="hidden" name="selected_template" id="selected_template">
-        <input type="text" name="name" placeholder="Ονοματεπώνυμο" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <textarea name="bio" placeholder="Σύντομο bio"></textarea>
-        <button type="submit">Αποστολή</button>
-    </form>
-    </section>
+<section id="form" data-aos="fade-up">
+  <h2>Συμπλήρωσε τα στοιχεία σου</h2>
+  <form id="orderForm" action="https://formspree.io/f/mldndnal" method="POST">
+    <input type="hidden" name="selected_template" id="selected_template">
+
+    <input type="text" name="name" placeholder="Ονοματεπώνυμο" required>
+    <input type="email" name="email" placeholder="Email" required>
+    
+    <input type="number" name="age" placeholder="Ηλικία (προαιρετικό)" min="14" max="100">
+    
+    <textarea name="bio" placeholder="Σύντομο bio (π.χ. τι κάνεις, τι έχεις σπουδάσει κλπ)"></textarea>
+    
+    <textarea name="purpose" placeholder="Πού σκοπεύεις να χρησιμοποιήσεις το CV site; (LinkedIn, εύρεση εργασίας, προσωπικό blog...)"></textarea>
+
+    <button type="submit">Αποστολή</button>
+  </form>
+</section>
+
 
 
 
