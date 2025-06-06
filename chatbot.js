@@ -40,5 +40,5 @@ function finalChoice(purpose, style) {
 
   // Update hidden field & display
   document.getElementById("selected_template").value = suggestion;
-  document.getElementById("selectedDisplay").innerText = `Έχεις επιλέξει το: ${suggestion.toUpperCase()}`;
+  document.getElementById("selectedDisplay").innerText = `✔️ Έχεις επιλέξει το: ${suggestion.toUpperCase()}`;
 }
