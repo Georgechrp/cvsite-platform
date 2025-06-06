@@ -2,18 +2,19 @@ function addToCart(templateId) {
   sessionStorage.setItem('selectedTemplate', templateId);
 
   const displayField = document.getElementById("selectedDisplay");
-  const templateNames = {
-    template1: "το πρώτο σχέδιο",
-    template2: "το δεύτερο σχέδιο",
-    template3: "το τρίτο σχέδιο"
-  };
 
-  const userFriendlyName = templateNames[templateId] || "κάποιο σχέδιο";
-  displayField.textContent = `✔️ Έχεις επιλέξει ${userFriendlyName}.`;
+  const templateKey = `${templateId}_name`; // π.χ. template1_name
+  const templateName = translations[templateKey] || "κάποιο σχέδιο";
+
+  const messageTemplate = translations.template_selected || "✔️ Έχεις επιλέξει __TEMPLATE__.";
+  const finalMessage = messageTemplate.replace("__TEMPLATE__", templateName);
+
+  displayField.textContent = finalMessage;
 
   const hiddenInput = document.getElementById("selected_template");
   hiddenInput.value = templateId;
 }
+
 
 
 function previewTemplate(templateUrl) {

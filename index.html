@@ -22,13 +22,24 @@
     </div>
 
     <ul class="nav-links">
-      <li><a href="#">Αρχική</a></li>
-      <li><a href="#templates">Σχέδια</a></li>
-      <li><a href="#form">Φόρμα Παραγγελίας</a></li>
-      
+      <li><a href="#" id="nav-home">Αρχική</a></li>
+      <li><a href="#templates" id="nav-templates">Σχέδια</a></li>
+      <li><a href="#form" id="nav-form">Φόρμα Παραγγελίας</a></li>
+      <li>
+        <div class="language-toggle">
+          <input type="checkbox" id="langSwitch" onchange="toggleLanguage()" />
+          <label for="langSwitch" class="toggle-label">
+            <span class="lang lang-el">🇬🇷</span>
+            <span class="lang lang-en">🇬🇧</span>
+            <span class="toggle-ball"></span>
+          </label>
+        </div>
+      </li>
     </ul>
   </div>
 </nav>
+
+
 
 <header>
   <h1>Διάλεξε το δικό σου προσωπικό CV site</h1>
@@ -41,9 +52,7 @@
         Ενδιαφέρεσαι για ένα επαγγελματικό CV site; 
         Συμπλήρωσε την παρακάτω φόρμα και σύντομα θα επικοινωνήσουμε μαζί σου με όλες τις λεπτομέρειες (π.χ. τιμές, τρόπος πληρωμής, χρόνος υλοποίησης).
       </p>
-      <p style="max-width: 800px; margin: 1rem auto 0; font-size: 1rem; color: #555;">
-        💡 Μπορείς να δεις τα διαθέσιμα templates παρακάτω και να επιλέξεις αυτό που σου ταιριάζει περισσότερο.
-      </p>
+
     </section>
 
     <section id="templates" data-aos="fade-up">
@@ -80,23 +89,17 @@
     </section>
 
 
-<section id="form" data-aos="fade-up">
-  <h2>Συμπλήρωσε τη φόρμα και θα επικοινωνήσουμε εμείς μαζί σου!</h2>
-  <form id="orderForm" action="https://formspree.io/f/mldndnal" method="POST">
-    <input type="hidden" name="selected_template" id="selected_template">
-
-    <input type="text" name="name" placeholder="Ονοματεπώνυμο" required>
-    <input type="email" name="email" placeholder="Email" required>
-    
-    <input type="number" name="age" placeholder="Ηλικία (προαιρετικό)" min="14" max="100">
-    
-    <textarea name="bio" placeholder="Σύντομο bio (π.χ. τι κάνεις, τι έχεις σπουδάσει κλπ)"></textarea>
-    
-    <textarea name="purpose" placeholder="Πού σκοπεύεις να χρησιμοποιήσεις το CV site; (LinkedIn, εύρεση εργασίας, προσωπικό blog...)"></textarea>
-
-    <button type="submit">Αποστολή</button>
-  </form>
-</section>
+    <section id="form" data-aos="fade-up">
+      <h2>Συμπλήρωσε τη φόρμα και θα επικοινωνήσουμε εμείς μαζί σου!</h2>
+      <form id="orderForm" action="https://formspree.io/f/mldndnal" method="POST">
+        <input type="text" name="name" id="form-name" placeholder="Ονοματεπώνυμο" required>
+        <input type="email" name="email" id="form-email" placeholder="Email" required>
+        <input type="number" name="age" id="form-age" placeholder="Ηλικία (προαιρετικό)" min="14" max="100">
+        <textarea name="bio" id="form-bio" placeholder="Σύντομο bio (π.χ. τι κάνεις, τι έχεις σπουδάσει κλπ)"></textarea>
+        <textarea name="purpose" id="form-purpose" placeholder="Πού σκοπεύεις να χρησιμοποιήσεις το CV site; (LinkedIn, εύρεση εργασίας, προσωπικό blog...)"></textarea>
+        <button type="submit" id="form-submit">Αποστολή</button>
+      </form>
+    </section>
 
 
 
@@ -113,27 +116,29 @@
 
 
 
-        <!-- Chatbot Button -->
-    <div id="chatbot-button">💬 Βοήθεια;</div>
+    <div id="chatbot-button">💬 <span id="chatbot-open">Βοήθεια;</span></div>
 
-    <!-- Chatbot Box -->
     <div id="chatbot-box" class="hidden">
-      <div id="chatbot-header">🤖 Βοηθός Επιλογής Template</div>
+      <div id="chatbot-header">🤖 <span id="chatbot-title">Βοηθός Επιλογής Template</span></div>
       <div id="chatbot-content">
-        <p>Γεια σου! 👋 Θες να σε βοηθήσω να βρεις το κατάλληλο template;</p>
-        <button onclick="nextStep(1)">Ναι, φυσικά!</button>
+        <p id="chatbot-msg">Γεια σου! 👋 Θες να σε βοηθήσω να βρεις το κατάλληλο template;</p>
+        <button onclick="nextStep(1)" id="chatbot-yes">Ναι, φυσικά!</button>
       </div>
     </div>
 
-<script src="chatbot.js"></script>
-<script src="order.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,
-    once: true,
-  });
-</script>
+
+
+
+    <script src="chatbot.js"></script>
+    <script src="order.js"></script>
+    <script src="lang.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+    </script>
 
 </body>
 </html>
